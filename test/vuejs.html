@@ -3,19 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>VueDemo</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/vue.min.js"></script>
   </head>
   <body>
-    <div id="app">
-      <p>{{ message }}</p>
-    </div>
+    <div id="app">{{ message }}</div>
   </body>
-  <script type="text/javasrcipt">
+  <script>
     var app = new Vue({
-        el:'#app',
-        data: {
-            message: 'hello Vue!'
-        }
-    })
+      el: "#app",
+      data: {
+        message: "Hello Vue!"
+      }
+    });
   </script>
 </html>
