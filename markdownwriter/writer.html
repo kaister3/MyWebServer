@@ -35,6 +35,16 @@
         var html = converter.makeHtml(text);
         document.getElementById("result").innerHTML = html;
       }
+
+      function saveFile(content) {
+        //保存
+        var filename = prompt("输入您的文件名");
+        var win = window.open("", "", "top=10000,left=10000");
+        win.document.write(document.getElementById(content).innerHTML);
+        win.document.execCommand("SaveAs", "", filename);
+        win.close();
+      }
     </script>
+    <input type="button" value="保存文本" onClick="saveFile(oriContent)" />
   </body>
 </html>
