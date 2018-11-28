@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"> 
+  <head>
     <title>Markdown.js</title>
-    <script src="showndown/dist/showdown.min.js"></script>
-</head>
-<body>
-    <textarea name="" id="oriContent" cols="50" rows="30"></textarea>
+    <script type="text/javascript" src="js/showdown.min.js"></script>
+  </head>
+  <style>
+    blockquote {
+      border-left: #eee solid 5px;
+      padding-left: 20px;
+    }
+    ul li {
+      line-height: 20px;
+    }
+
+    code {
+      color: #d34b62;
+      background: #f6f6f6;
+    }
+  </style>
+
+  <body>
     <div id="result"></div>
-    <script>
-        document.getElementById('oriContent').onkeyup=function() {
-            var text = document.getElementById("oriContent").value;
-            var converter = new showdown.Converter();
-            var html = converter.makeHtml(text);
-            document.getElementById('result').innerHTML = this.value;
-        }
-        </script>
-</body>
+    <div>
+      <textarea
+        id="oriContent"
+        style="height:200px;width:600px;"
+        onkeyup="convert()"
+      ></textarea>
+    </div>
+    <script type="text/javascript">
+      function convert() {
+        var text = document.getElementById("oriContent").value;
+        var converter = new showdown.Converter();
+        var html = converter.makeHtml(text);
+        document.getElementById("result").innerHTML = html;
+      }
+    </script>
+  </body>
 </html>
