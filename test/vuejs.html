@@ -3,26 +3,45 @@
   <head>
     <meta charset="utf-8" />
     <title>VueDemo</title>
+    <link rel="stylesheet" href="css/deafult.css" type="text/css" />
+    <link
+      rel="css/deafult.css"
+      type="text/css"
+      media="screen"
+      href="main.css"
+    />
     <script src="js/vue.min.js"></script>
   </head>
   <body>
-    <div id="app">{{ message }}</div>
-    <div id="app-2">
-      <span v-bind:title="message"> 鼠标悬停查看此处信息 </span>
+    <div>
+      <h2>
+        <div id="app">
+          <ol>
+            <li v-for="todo in todos">{{ todo.text }}</li>
+          </ol>
+        </div>
+        <div id="asd">{{ message }}</div>
+      </h2>
     </div>
+    <script>
+      var app4 = new Vue({
+        el: "#app",
+        data: {
+          todos: [
+            { text: "学习 JavaScript" },
+            { text: "学习 Vue" },
+            { text: "整个牛项目" }
+          ]
+        }
+      });
+      var app = new Vue({
+        el: "#asd",
+        data: {
+          message: "fuck"
+        }
+      });
+    </script>
   </body>
-  <script>
-    var app = new Vue({
-      el: "#app",
-      data: {
-        message: "Hello Vue!"
-      }
-    });
-    var app2 = new Vue({
-      el: "#app-2",
-      data: {
-        message: "页面加载于" + new Date().toLocaleDateString()
-      }
-    });
-  </script>
 </html>
+>
+<!-- 一次只能渲染一个div!如果实在有多个部分,把他们放在同一个新的div里就好啦 -->
