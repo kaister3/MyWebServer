@@ -2,11 +2,21 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>js练习</title>
+        <title>???</title>
+        <script>
+        function Color(str) {
+            document.body.style.backgroundColor = str;
+        }</script>
     </head>
     <body>
+        <input type="button" value="test" id="btn">
+        <div id="fuck"></div>
         <script>
-            alert("NMSl");
+            document.getElementById('btn').onclick=function() {
+                document.getElementById('fuck').innerHTML=this.value;
+            }
         </script>
+
+        <input type="button" value="red" onclick="Color('red')">
     </body>
 </html>
