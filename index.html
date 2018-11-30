@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" http-equiv="Content-Type" content="text/html" />
-    <title>NMSL</title>
-    <link rel="stylesheet" type="text/css" href="CSS/first.css" />
-    <script src="js/setcolor.js"></script>
-    <script src="js/vue.min.js"></script>
-  </head>
 
-  <body>
-    <h1>Hello world</h1>
+<head>
+  <meta charset="utf-8" http-equiv="Content-Type" content="text/html" />
+  <title>NMSL</title>
+  <link rel="stylesheet" type="text/css" href="CSS/first.css" />
+  <script src="js/setcolor.js"></script>
+  <script src="js/vue.min.js"></script>
+</head>
 
-    <marquee behavior="alternate">
-      <h2 style="font: size 15px;">
-        NMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSL
-      </h2>
-    </marquee>
-    <br />
-    <script>
-      var passwd = prompt("please input the password!");
-      if (passwd == "123456") {
-        alert("欢迎");
-      } else {
-        alert("输入错误");
-        window.location.href = "loginfailed/loginfailed.html";
-      }
-    </script>
-    <div style="font-family:monofur;font-size: 20px;text-align: center">
-      <article>
-        <h1 style="font-size:50px">Index</h1>
-        <h1>目录</h1>
-        <a href="blog/b_index.html">my blog</a>
-        <a href="m_player/player.html">music</a>
-        <a href="markdownwriter/writer.html">markdown(beta)</a>
-        <a href="test/jspractise.html">jspractise</a>
-        <a href="test/t_index.html">another vue</a>
-        <a href="test/vuejs.html">vue.js练习</a>
-        <h1>其他功能</h1>
-        <input
-          type="button"
-          name="setyellow"
-          id="btn_y"
-          value="变色"
-          onclick="setcolor('#7DD1F0')"
-        />
-      </article>
-    </div>
-  </body>
+<body>
+  <h1>Hello world</h1>
+
+  <marquee behavior="alternate">
+    <h2 style="font: size 15px;">
+      NMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSLNMSL
+    </h2>
+  </marquee>
+  <br />
+  <script>
+    var passwd = prompt("please input the password!");
+    if (passwd == "123456") {
+      alert("欢迎");
+    } else {
+      alert("输入错误");
+      window.location.href = "loginfailed/loginfailed.html";
+    }
+  </script>
+  <div style="font-family:monofur;font-size: 20px;text-align: center">
+    <article>
+      <h1 style="font-size:50px">Index</h1>
+      <h1>目录</h1>
+      <a href="blog/b_index.html">my blog</a>
+      <a href="m_player/player.html">music</a>
+      <a href="markdownwriter/writer.html">markdown(beta)</a>
+      <a href="test/jspractise.html">jspractise</a>
+      <a href="test/t_index.html">another vue</a>
+      <a href="test/vuejs.html">vue.js练习</a>
+      <h1>其他功能</h1>
+      <input type="button" name="setyellow" id="btn_y" value="变色" onclick="setcolor('#7DD1F0')" />
+    </article>
+  </div>
+</body>
 </html>
